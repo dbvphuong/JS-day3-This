@@ -12,7 +12,7 @@ fn(); // cách gọi 1- cách gọi hàm cơ bản
  var o = {  
   method: fn  
 }  
- o.method(); // cách gọi 2- gán 1 giá trị bằng biến  
+ o.method(); // cách gọi 2- gán 1 giá trị bằng biến(Function Expressions)  
  fn.call(); // cách gọi 3- dùng hàm call()  cấu trúc: function.call(đối tượng this,tham số 1 của hàm, tham số 2 của hàm,..)
  new fn(); // cách gọi 4 - chuyển sang object.  
  
@@ -24,7 +24,7 @@ var a = 2;
 f(); // ??  
 
 Kết quả là 2.  
-Hàm gọi theo cách cơ bản, this trỏ vào đối tượng function f.  
+Hàm gọi theo cách Function Delartion, this trỏ vào đối tượng function f.  
 
 ## Cho đoạn code sau, kết quả in ra là gì ?  
 function g() {  
@@ -55,7 +55,7 @@ var o = {
 }  
 };  
 o.f();  
-Kết quả ra là 2. this trỏ đến nơi chứa giá trị a là o.
+Kết quả ra là 2. hàm được gọi theo cách 2 Function Expressions(gán 1 biến = 1 function).this trỏ đến nơi chứa giá trị a là o.
 
 ## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
 function f() {  
@@ -68,7 +68,7 @@ var o = {
 var g = o.f;  
 g(); // ??    
 
-Kết quả là 2. This trỏ tới o.  
+Kết quả là 2.hàm được gọi theo cách Function Expressions. This trỏ tới o.  
 
 
 ## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
@@ -81,4 +81,13 @@ var o = {
 var g = f.apply(o);  
 f.call(o); // ??  
 g(); // ??  
+
+Kết quả ra là 2.gọi hàm theo kiểu Function Expressions và dùng hàm call. this trỏ tới o, vì có hàm apply và call gán this vào o. 
+
+## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
+function f(a) {  
+  this.a = a;  
+}  
+var g = new f(2);  
+console.log(g.a); // ???  
 
