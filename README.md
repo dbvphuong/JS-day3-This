@@ -27,58 +27,58 @@ Kết quả là 2.
 Hàm gọi theo cách cơ bản, this trỏ vào đối tượng function f.  
 
 ## Cho đoạn code sau, kết quả in ra là gì ?  
-function g() {
-  "use strict";
-  console.log(this.b);
-}
-var b = 2;
+function g() {  
+  "use strict";  
+  console.log(this.b);  
+}  
+var b = 2;  
 g(); // ??  
 
 Kết quả ra undefined  
 
 ## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
-function f() {
-  console.log(this.a);
-}
-var o = {
-  a: 2,
-  f: f
-};
+function f() {  
+  console.log(this.a);  
+}  
+var o = {  
+  a: 2,  
+  f: f  
+};  
 o.f(); // ??  
  
 đoạn code trên tương đương với:  
 
-var o = {
-  a: 2,
-  f: function f() {
-  console.log(this.a);
-}
-};
-o.f();
+var o = {  
+  a: 2,  
+  f: function f() {  
+  console.log(this.a);  
+}  
+};  
+o.f();  
 Kết quả ra là 2. this trỏ đến nơi chứa giá trị a là o.
 
 ## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
-function f() {
-  console.log(this.a);
-}
-var o = {
-  a: 2,
-  f: f
-};
-var g = o.f;
-g(); // ??  
+function f() {  
+  console.log(this.a);  
+}  
+var o = {  
+  a: 2,  
+  f: f  
+};  
+var g = o.f;  
+g(); // ??    
 
 Kết quả là 2. This trỏ tới o.  
 
 
 ## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
-function f() {
-  console.log(this.a);
-}
-var o = {
-  a: 2
-};
-var g = f.apply(o);
-f.call(o); // ??
+function f() {  
+  console.log(this.a);  
+}  
+var o = {  
+  a: 2  
+};  
+var g = f.apply(o);  
+f.call(o); // ??  
 g(); // ??  
 
