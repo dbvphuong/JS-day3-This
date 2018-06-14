@@ -8,7 +8,7 @@ This trỏ tới scope của function là sai mà trỏ đến window.2 scope ko
 ## So sánh các dạng gọi hàm như code:
 function fn() {  
 }  
-fn(); // cách gọi 1- cách gọi hàm cơ bản  
+fn(); // cách gọi 1- cách gọi hàm Function Delartion 
  var o = {  
   method: fn  
 }  
@@ -88,6 +88,7 @@ Kết quả ra là 2.gọi hàm theo kiểu Function Expressions và dùng hàm 
 function f(a) {  
   this.a = a;  
 }  
-var g = new f(2);  
+var g = new f(2);  // gán a=2
 console.log(g.a); // ???  
 
+Kết quả là 2. cách gọi bằng object. This trỏ vào function f.
