@@ -45,8 +45,7 @@ var o = {
   f: f
 };
 o.f(); // ??  
-
-Kết quả ra là 2.  
+ 
 đoạn code trên tương đương với:  
 
 var o = {
@@ -56,3 +55,30 @@ var o = {
 }
 };
 o.f();
+Kết quả ra là 2. this trỏ đến nơi chứa giá trị a là o.
+
+## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
+function f() {
+  console.log(this.a);
+}
+var o = {
+  a: 2,
+  f: f
+};
+var g = o.f;
+g(); // ??  
+
+Kết quả là 2. This trỏ tới o.  
+
+
+## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
+function f() {
+  console.log(this.a);
+}
+var o = {
+  a: 2
+};
+var g = f.apply(o);
+f.call(o); // ??
+g(); // ??  
+
