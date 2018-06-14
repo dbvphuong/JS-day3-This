@@ -22,3 +22,37 @@ fn(); // cách gọi 1- cách gọi hàm cơ bản
 }  
 var a = 2;  
 f(); // ??  
+
+Kết quả là 2.  
+Hàm gọi theo cách cơ bản, this trỏ vào đối tượng function f.  
+
+## Cho đoạn code sau, kết quả in ra là gì ?  
+function g() {
+  "use strict";
+  console.log(this.b);
+}
+var b = 2;
+g(); // ??  
+
+Kết quả ra undefined  
+
+## Cho đoạn code sau, kết quả in ra là gì ? hàm được gọi theo cách nào? theo em trong trường hợp này this trỏ vào đối tượng nào ?  
+function f() {
+  console.log(this.a);
+}
+var o = {
+  a: 2,
+  f: f
+};
+o.f(); // ??  
+
+Kết quả ra là 2.  
+đoạn code trên tương đương với:  
+
+var o = {
+  a: 2,
+  f: function f() {
+  console.log(this.a);
+}
+};
+o.f();
