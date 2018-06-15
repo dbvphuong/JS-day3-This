@@ -137,12 +137,12 @@ Cóntructor dùng để định nghĩa giá trị, thuộc tính cho đối tư�
 
 # 1.5 Prototypes(cha)  
 ### Xem xét đoạn code sau, em có nhận xét gì ?
-var o1 = {
-  a: 2
-}
+var o1 = {  
+  a: 2  
+}  
 var o2 = Object.create(o1); // nghĩa là o2 liên kết với o1, o2 nhận giá trị o1 nhưng không ngược lại.  
-console.log(o2.a); // 2
-o1.a = 10;
-console.log(o2.a); // 10
+console.log(o2.a); // 2  
+o1.a = 10;  
+console.log(o2.a); // 10  
 
 Nhận xét: o2 chính là con của o1, nếu nó không có giá trị thì sẽ tìm đến cha.  
