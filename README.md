@@ -131,7 +131,7 @@ OOP là lập trình theo hướng đối tượng.
 - Đóng gói(bảo mật thông tin): không cho phép thay đổi nội dung đối tượng, chỉ các phương thức nội tại mới thay đổi được(ví dụ ông hàng xóm đến xin hạt tiêu, thì người chủ nhà sẽ vào lấy rồi mang ra cửa cho, chứ không cho ông kia vào nhà).  
 - Đa hình: là các thuộc tính của đối tượng giống nhau nhưng giá trị của chúng có thể khác nhau(ví dụ như con mèo "kêu" meo meo, con chó "kêu" gâu gâu).  
 ### So sánh "class" và "instance"  
-
+class là bản vẽ cái bàn còn instance là bố cục cái bàn (gồm có các bộ phận cái bàn)  
 ### Constructor là gì?  
 Cóntructor dùng để định nghĩa giá trị, thuộc tính cho đối tượng ban đầu.(ví dụ dùng từ khóa new object() )  
 
