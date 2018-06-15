@@ -89,3 +89,44 @@ Có 4 cách goi hàm.
 
 
 # 1.2 Objects  
+
+#### 6 kiểu nguyên thủy object là:  
+- Object.  
+- Array.  
+- String.  
+- Number.  
+- Boolean.  
+- Function.  
+
+#### Cách để tạo clone object( nghĩa là tạo 1 object mới là bản coppy của object cũ).  
+Cú pháp:  
+var a= {x:3, x:4};  
+var b= Object.assign({},a);
+JSON.stringify(b); //  {x:3, x:4}  
+Hoặc:  
+var a= {x:3, x:4}; 
+var b= JSON.parse(JSON.stringify(a))  
+JSON.stringify(b); //  {x:3, x:4}  
+
+# 1.3 Iteration  
+### Có những cách nào để duyệt các phần tử trong 1 array ? Viết code ví dụ:  
+Dùng vòng lặp for.  
+vd:  
+text;
+a=["hay","noi","di","em"];  
+ for(i=0; i<a.length; i++){  
+ text +=a[i] + " "  
+};  
+// "hay noi di em"  
+
+### Có những cách nào để duyệt các thuộc tính trong 1 object? Viết code ví dụ:  
+
+
+# 1.4 Class Theory  
+### Nhớ lại OOP là gì ? các thuộc tính của OOP?  
+OOP là lập trình theo hướng đối tượng.  
+4 thuộc tính của OOP:  
+- Trừu tượng: Các đối tượng được diễn tả trên lập trình bằng các thuộc tính trừu tượng.  
+- Kế thừa: các đối tượng con sẽ có các thuộc tính của cha(cha thì không, các con không có các thuộc tính của nhau, và mỗi con chỉ có 1 cha, mỗi cha chỉ có 1 ông).  
+- Đóng gói(bảo mật thông tin): không cho phép thay đổi nội dung đối tượng, chỉ các phương thức nội tại mới thay đổi được(ví dụ ông hàng xóm đến xin hạt tiêu, thì người chủ nhà sẽ vào lấy rồi mang ra cửa cho, chứ không cho ông kia vào nhà).  
+- Đa hình: là gọi các hàm bên trong 1 đối tượng.
