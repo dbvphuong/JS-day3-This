@@ -120,6 +120,12 @@ a=["hay","noi","di","em"];
 // "hay noi di em"  
 
 ### Có những cách nào để duyệt các thuộc tính trong 1 object? Viết code ví dụ:  
+Dùng for in  . for(giatriganvao in tenobject)
+vd: var object={x:1, y:2, z:3};  
+text="";  
+for(a in object){  
+text += object[a]  
+}  
 
 
 # 1.4 Class Theory  
